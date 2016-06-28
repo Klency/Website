@@ -1,0 +1,42 @@
+.o {
+    background-image: url("../img/check.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.n{
+    background-image: url("../img/x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.a {
+    background-image: url("../img/nothing.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.name, .date{
+    background-color : #014171;
+    text-align: center;
+    color : white
+}
+
+.plage{
+    background-color : #9D9D9D;
+    text-align: center;
+    color : white
+}
+
+form{
+    text-align: center; 
+}
+

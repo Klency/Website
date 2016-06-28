@@ -1,0 +1,76 @@
+#title{
+    max-width:20%;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gameInfo{
+    font-family:'Butterfly Kids', serif;
+    font-weight: bold;
+    font-size: 1.5em; 
+}
+
+#gameTitle{
+    font-size: 2em; 
+}
+
+.blueLetter{
+    color: blue;  
+}
+.redLetter{
+    color: red;
+}
+.greenLetter{
+    color: green;
+}
+.yellowLetter{
+    color: yellow;
+}
+.purpleLetter{
+    color: purple; 
+}
+
+td{
+    background-repeat: no-repeat;
+    background-position: center;
+    width:50px;
+    height:50px;
+}
+
+.unselected{
+    background-color:white;
+}
+
+.selected{
+    background-color:grey;
+}
+
+td[color="bleu"]{
+    background-image: url("../img/bleu.gif");
+}
+td[color="jaune"]{
+    background-image: url("../img/jaune.gif");
+}
+td[color="rouge"]{
+    background-image: url("../img/rouge.gif");
+}
+td[color="vert"]{
+    background-image: url("../img/vert.gif");
+}
+td[color="magenta"]{
+    background-image: url("../img/magenta.gif");
+}
+.tp{
+    border: 1px solid #333333;
+    position:absolute;
+    width:30px;
+    height:20px;
+    line-height: 20px;
+    text-align:center;
+    margin-top:11px;
+    color: #000000;
+    background: #FFFF00;
+    visibility:hidden;
+}

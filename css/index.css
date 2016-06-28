@@ -1,0 +1,103 @@
+/*Make <a> look like button*/
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-style: solid;
+    border-width: 15px;
+    text-decoration: none;
+    color: initial;
+}
+
+/*Make the text on the carousel smaller*/
+#theCarousel {
+  font-size: 40%;
+  font-family: arial, sans-serif;
+}
+#nttLogo{
+  height: 100px;
+  width: 100px;
+}
+#websiteTitle{
+  font-size: 10em;
+  vertical-align: middle;
+  font-family: 'Pacifico', cursive;
+  padding-left: 15px;
+  color: #191970;
+}
+#websiteSlogan{
+  font-size: 5.4em;
+}
+/* Carousel Styling */
+.slide1{
+  background-image: url('../media/photo/mac.png');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide2{
+  background-image: url('../media/photo/Couchant maison.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slide3{
+  background-image: url('../media/photo/IMG_0786.JPG');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carousel-caption h1{
+  font-size: 5.4em;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: .4em;
+}
+.carousel-caption p{
+  font-size: 2em;
+}
+/*Style of title above carousel*/
+.title
+{
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    top: 50px;
+    width: 100%;
+    color: #FFF;
+}
+.main-text
+{
+  text-shadow: 2px 2px #000000;
+}
+.name
+{
+  top: 5px;
+  left: 10px;
+}
+#btn-bar 
+{
+	padding-top: 10px;
+	font-family: arial, sans-serif;
+
+}
+
+/*Style of quote under carousel*/
+.quote
+{
+  font-family: 'Calligraffitti', cursive;
+  font-size: large ;
+}
+
+/*Make the img-cirle have a shadow*/
+.img-circle
+{
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(http://link-to-your/image.jpg) no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}

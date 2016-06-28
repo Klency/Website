@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-model href="http://www.oxygenxml.com/1999/xhtml/xhtml-xforms.nvdl" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xforms="http://www.w3.org/2002/xforms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <head>
+      <title>TP2 - IFT3225 - Francis Montpetit et Manatea Bresson</title>
+    </head>
+    <body>
+      <h1>TP2 :: IFT3225</h1>
+      <h2>Francis Montpetit <br/>Manatea Bresson</h2>
+      <h3>Choix de représentation :</h3>
+      <ul>
+        <li>XHTML
+          <p>
+            La page XHTML en elle-même est assez simple. Elle fait un lien
+            vers les fichiers CSS et Javascript qui y sont associés,à JQuery 
+            ainsi qu'à la police de caractère utilisée pour la page. 
+            
+            Pour le titre de la page, nous avons créé des spans avec des 
+            classes auxquelles le fichier CSS va attribuer une couleur pour chaque lettre,
+            reproduisant le visuel de l'énoncé. Tout le texte est situé dans le div
+            "gameInfo" avec lequel le CSS va attribuer la police de caractère désirée. 
+            
+            Le jeu sera modifiée selon le nombre de colonnes et de rangées par l'entrée de l'utilisateur
+            dans les cases crées par les balises inputs. Le total des points, initialement
+            vide, est situé dans un span à l'identifiant "result" qui sera modifié à l'aide de 
+            Javascript.  Le jeu, pour sa part, est initialement vide et sera également créé à l'aide 
+            de Javascript. 
+          </p>
+        </li>
+        <li>CSS
+          <p>
+            Au-delà de l'esthétique général de la page, le CSS s'occupera de l'image contenue
+            dans chaque case selon la valeur de l'attribut color qui lui est donnée. Il s'occupera aussi, 
+            si une case est considérée comme sélectionnée ou non, de modifier l'affichage pour 
+            que ces cases soient respectivement grises ou blanches. 
+          </p>
+        </li>
+        <li>Javascript
+          <p>
+            Comme demandé par l'énoncé, la programmation Javascript utilise principalement JQuery.
+            En initialisant le jeu, ou à chaque fois que le joueur modifie la valeur des colonnes ou 
+            des lignes, un tableau est créé selon ces dites valeurs (initialisées à 5). Nous avons forcé 
+            les valeurs de l'entrée à des valeurs numériques pour éviter toute erreur lors de l'exécution du programme.
+            Nous réinitialisons également le total de points ainsi que le tableau pour en créer un nouveau. 
+            Chaque case sera initilialisée avec la classe unselected et se verra aléatoirement attribuer un attribut
+            color qui permettra d'identifier le contenu de chaque case. Les cases auront également un 
+            click listener qui permettra de faire la sélection des cases. 
+            
+            Lorsque le joueur clique sur une case, deux cas peuvent se présenter : 
+          </p>
+          <ol>
+            <li>La case possède la classe unselected et son attribut color n'est pas dontTreat.
+              <p>
+                dontCare correspond aux cases qui sont vides. Ainsi, si la case est non vide et n'est pas déja
+                sélectionnée, nous allons déselectionner les cases précédemment sélectionnée. Par la suite, on 
+                propage la sélection. Si aucune case adjacente possède le même attribut couleur, aucune case ne
+                sera sélectionnée. Si au moins une le possède, nous propageons la sélection sur toute les cases qui
+                ne sont pas déja sélectionnée de la même couleur. Nous affichons, lorsqu'il y a une sélection, le nombre
+                de points auxquels la sélection correspond.
+              </p>
+            </li>
+            <li>La case possède la classe selected et son attribut color n'est pas dontTreat.
+              <p>
+                Pour toute case ayant la classe selected, nous incrémentons une variable locale contenant le nombre de cases sélectionnées
+                et modifions l'attribut color à dontTreat pour ensuite la vider de son contenu. Nous faisons ensuite appel à la fonction
+                sink qui fait descendre les cases au-dessus de la case concernée. Une fois ces opérations effectuées sur les cases 
+                concernées, nous calculons le nombre de points qu'on aditionne à celui déja existant et modifions l'affichage de celui-ci. 
+                Pour éviter une erreur, nous faisons ensuite appel à la fonction unselectAll qui permettra, si jamais il reste une case sélectionnée,
+                de modifier sa classe à unselected.
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ul>
+      <h3>Apprentissages :</h3>
+      <p>
+        Ce projet nous a principalement permis d'améliorer nos connaissances de la programmation Javascript axées sur le web et, du même coup, de JQuery.
+        Nous avons appris comment mieux manipuler les éléments DOM à l'aide de Javascript, principalement ici les éléments d'un tableau.
+        Toute fonctions passée en paramètre à $(document).ready sera exécutée lors de l'ouverture de la page.
+        C'est ainsi que nous pouvons inititialiser le jeu qui est intialement vide dans le document XHTML. À l'aide de listeners
+        déja implémentés dans JQuery, pouvons rendre notre page intéractive en passant en paramètre l'action que nous voulons effectuer sur l'élément auxquel ce dit listener est attaché.
+        Nous avons également appris à utiliser les classes et les attributs des balises XHTML pour sélectionner des éléments précis et manipuler ces classes
+        et attributs pour modifier le comportement de chacun des éléments.  Par exemple, dans notre cas, on attribue l'image contenu dans un td grâce à l'attribut 
+        color. Nous pouvons aussi utiliser les classes et les attributs pour facilement comparer des éléments, chose nécessaire dans un jeu de la forme de Candy Pop. 
+      </p>
+      <h3>Liens et fichiers :</h3>
+      <p><a href="CandyPop.xhtml">HTML</a></p>
+      <p><a href="styles/candypop.css">CSS</a></p>
+      <p><a href="js/candypop.js">Javascript</a></p>
+      <p><a href="TP2.zip">.zip</a></p>
+      
+      <p>
+        <a href="http://validator.w3.org/check?uri=referer"><img
+          src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+      </p>
+    </body>
+  </html>
